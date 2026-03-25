@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Pico — Dev Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- STARS -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="nav-logo" href="#hero"><span>K</span>Pico</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Hablemos</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="orb orb-i" style="width:500px;height:500px;top:-100px;right:-100px;opacity:0.6;"></div>
+    <div class="orb orb-r" style="width:350px;height:350px;bottom:0;left:10%;opacity:0.5;"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-available reveal">
+          <div class="hero-dot"></div>
+          <span>Disponible para proyectos</span>
+        </div>
+        <h1 class="hero-name reveal reveal-d1">
+          <span class="line1">Kevin</span>
+          <span class="line2">
+            <span class="accent-i">Pi</span><span class="accent-r">co</span>
+          </span>
+        </h1>
+        <p class="hero-role reveal reveal-d2">
+          Developer &amp; <span>Creative Coder</span> — Colombia 🇨🇴
+        </p>
+        <p class="hero-desc reveal reveal-d3">
+          Construyo productos digitales que mezclan código limpio con diseño que impacta.
+          Especializado en experiencias web rápidas, bonitas y escalables.
+        </p>
+        <div class="hero-ctas reveal reveal-d4">
+          <a class="btn-primary" href="#projects">Ver mi trabajo</a>
+          <a class="btn-secondary" href="#contact">Contactarme</a>
+        </div>
+      </div>
+
+      <div class="hero-stats reveal reveal-d2">
+        <div class="stat-card">
+          <div class="num c-i" data-count="24">0</div>
+          <div class="lbl">Proyectos</div>
+        </div>
+        <div class="stat-card">
+          <div class="num" data-count="5">0</div>
+          <div class="lbl">Años exp.</div>
+        </div>
+        <div class="stat-card">
+          <div class="num c-r" data-count="12">0</div>
+          <div class="lbl">Clientes</div>
+        </div>
+        <div class="stat-card">
+          <div class="num c-i" data-count="99">0</div>
+          <div class="lbl">% Satisfac.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="orb orb-i" style="width:400px;height:400px;top:50%;left:-150px;opacity:0.4;"></div>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-frame">
+          <div class="about-initials">JP</div>
+        </div>
+        <div class="about-badge">
+          <div class="badge-n">1+</div>
+          <div class="badge-l">Años de<br>experiencia</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag reveal">Sobre mí</div>
+        <h2 class="section-title reveal reveal-d1">Hola, soy <span>Kevin</span> 👋</h2>
+        <p class="reveal reveal-d2">
+          Soy un desarrollador full-stack de <strong>Colombia</strong>, apasionado por construir
+          productos que resuelven problemas reales. Me encanta la intersección entre
+          tecnología y diseño, donde el código se convierte en experiencias memorables.
+        </p>
+         <p class="reveal reveal-d3">
+          He realizado proyectos en <strong>Campuslands</strong>, donde he aprendido y mejorado
+          mis habilidades constantemente. Cada proyecto ha sido una oportunidad para
+          crecer, aplicar nuevas tecnologías y afianzar mi stack favorito alrededor de
+          C#, Html, Css, JavaScript y bases de datos relacionales.
+        </p>
+        <div class="about-pills reveal reveal-d4">
+          <span class="pill">Git</span>
+          <span class="pill">GitHub</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Mysql</span>
+          <span class="pill">Scrum</span>
+          <span class="pill">Python</span>
+          <span class="pill">Css</span>
+          <span class="pill">C#</span>
+          <span class="pill">JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="orb orb-r" style="width:450px;height:450px;top:0;right:-100px;opacity:0.35;"></div>
+    <div class="section-tag reveal">Portafolio</div>
+    <h2 class="section-title reveal reveal-d1">Proyectos <span>seleccionados</span></h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card featured reveal">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(99,102,241,0.12);">🚀</div>
+          <div class="project-links">
+            <a class="project-link" href="#" title="GitHub">⌥</a>
+            <a class="project-link" href="#" title="Live">↗</a>
+          </div>
+        </div>
+        <h3 class="project-name">NovaPay — Plataforma de Pagos</h3>
+        <p class="project-desc">
+          Plataforma de pagos en tiempo real para Latinoamérica. Procesa más de
+          $2M/mes, con dashboard analytics, webhooks y API REST pública. Reducción
+          del 60% en tiempo de integración vs competidores.
+        </p>
+        <div class="project-stack">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag rose">AWS Lambda</span>
+          <span class="tech-tag rose">Stripe API</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d1">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(244,63,94,0.10);">🧠</div>
+          <div class="project-links">
+            <a class="project-link" href="#" title="GitHub">⌥</a>
+            <a class="project-link" href="#" title="Live">↗</a>
+          </div>
+        </div>
+        <h3 class="project-name">MindFlow — App de Salud Mental</h3>
+        <p class="project-desc">
+          App móvil de seguimiento emocional con IA. Más de 8k usuarios activos y
+          4.8 estrellas en Play Store.
+        </p>
+        <div class="project-stack">
+          <span class="tech-tag">React Native</span>
+          <span class="tech-tag rose">OpenAI API</span>
+          <span class="tech-tag">Supabase</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(99,102,241,0.12);">🌿</div>
+          <div class="project-links">
+            <a class="project-link" href="#" title="GitHub">⌥</a>
+            <a class="project-link" href="#" title="Live">↗</a>
+          </div>
+        </div>
+        <h3 class="project-name">EcoTrack — Carbon Footprint</h3>
+        <p class="project-desc">
+          Dashboard para empresas que mide y visualiza su huella de carbono.
+          Integra datos de IoT y APIs de proveedores de energía.
+        </p>
+        <div class="project-stack">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">D3.js</span>
+          <span class="tech-tag rose">IoT / MQTT</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d1">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(244,63,94,0.10);">🏪</div>
+          <div class="project-links">
+            <a class="project-link" href="#" title="GitHub">⌥</a>
+            <a class="project-link" href="#" title="Live">↗</a>
+          </div>
+        </div>
+        <h3 class="project-name">StoreOS — E-commerce Engine</h3>
+        <p class="project-desc">
+          Motor de e-commerce headless para pymes. Multi-tienda, multi-moneda
+          y fácil de integrar con cualquier frontend.
+        </p>
+        <div class="project-stack">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">GraphQL</span>
+          <span class="tech-tag rose">Docker</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(99,102,241,0.12);">📡</div>
+          <div class="project-links">
+            <a class="project-link" href="#" title="GitHub">⌥</a>
+            <a class="project-link" href="#" title="Live">↗</a>
+          </div>
+        </div>
+        <h3 class="project-name">PulseAPI — Monitoreo en Tiempo Real</h3>
+        <p class="project-desc">
+          Herramienta open-source de monitoreo de APIs y servicios. Alertas
+          por Slack, email y webhook con dashboards configurables.
+        </p>
+        <div class="project-stack">
+          <span class="tech-tag">Go</span>
+          <span class="tech-tag">WebSockets</span>
+          <span class="tech-tag rose">Prometheus</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="orb orb-i" style="width:400px;height:400px;bottom:-100px;left:30%;opacity:0.3;"></div>
+    <div class="section-tag reveal">Habilidades</div>
+    <h2 class="section-title reveal reveal-d1">Mi <span>stack</span></h2>
+
+    <div class="skills-layout">
+      <div>
+        <div class="skill-group-title reveal">Frontend</div>
+        <div class="skill-item reveal reveal-d1">
+          <div class="skill-meta"><span class="skill-name">React / Next.js</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill i" data-w="95"></div></div>
+        </div>
+        <div class="skill-item reveal reveal-d2">
+          <div class="skill-meta"><span class="skill-name">TypeScript</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill i" data-w="90"></div></div>
+        </div>
+        <div class="skill-item reveal reveal-d3">
+          <div class="skill-meta"><span class="skill-name">CSS / Animaciones</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill i" data-w="88"></div></div>
+        </div>
+        <div class="skill-item reveal reveal-d4">
+          <div class="skill-meta"><span class="skill-name">React Native</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill i" data-w="78"></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title reveal">Backend &amp; DevOps</div>
+        <div class="skill-item reveal reveal-d1">
+          <div class="skill-meta"><span class="skill-name">Node.js / Express</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar"><div class="skill-fill r" data-w="92"></div></div>
+        </div>
+        <div class="skill-item reveal reveal-d2">
+          <div class="skill-meta"><span class="skill-name">PostgreSQL / Redis</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill r" data-w="85"></div></div>
+        </div>
+        <div class="skill-item reveal reveal-d3">
+          <div class="skill-meta"><span class="skill-name">AWS / Docker</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill r" data-w="80"></div></div>
+        </div>
+        <div class="skill-item reveal reveal-d4">
+          <div class="skill-meta"><span class="skill-name">Go / Python</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill r" data-w="70"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-chip reveal"><span class="tool-icon">⚛️</span><div><div class="tool-name">React</div><div class="tool-lv">Avanzado</div></div></div>
+      <div class="tool-chip reveal reveal-d1"><span class="tool-icon">🟢</span><div><div class="tool-name">Node.js</div><div class="tool-lv">Avanzado</div></div></div>
+      <div class="tool-chip reveal reveal-d2"><span class="tool-icon">🐘</span><div><div class="tool-name">PostgreSQL</div><div class="tool-lv">Avanzado</div></div></div>
+      <div class="tool-chip reveal reveal-d1"><span class="tool-icon">🐳</span><div><div class="tool-name">Docker</div><div class="tool-lv">Intermedio</div></div></div>
+      <div class="tool-chip reveal reveal-d2"><span class="tool-icon">☁️</span><div><div class="tool-name">AWS</div><div class="tool-lv">Intermedio</div></div></div>
+      <div class="tool-chip reveal reveal-d3"><span class="tool-icon">🔷</span><div><div class="tool-name">TypeScript</div><div class="tool-lv">Avanzado</div></div></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="orb orb-r" style="width:500px;height:500px;top:-100px;left:50%;transform:translateX(-50%);opacity:0.3;"></div>
+    <div class="section-tag reveal" style="justify-content:center;">Contacto</div>
+    <h2 class="section-title reveal reveal-d1">¿Tienes un <span>proyecto</span>?</h2>
+    <p class="contact-sub reveal reveal-d2">
+      Siempre estoy abierto a nuevas oportunidades. Cuéntame de qué se trata y hablamos.
+    </p>
+
+    <div class="contact-card reveal reveal-d3">
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input class="form-input" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="tu@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Asunto</label>
+          <input class="form-input" type="text" placeholder="¿De qué se trata?" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submit-btn">Enviar mensaje ✦</button>
+      </form>
+    </div>
+
+    <div class="social-row reveal">
+      <a class="social-btn" href="https://github.com/kvinnxz" target="_blank"><span>⌥</span> GitHub</a>
+      <a class="social-btn" href="www.linkedin.com/in/kevin-pico" target="_blank"><span>in</span> LinkedIn</a>
+      <a class="social-btn" href="mailto:contacto@kevinpico.dev"><span>@</span> Email</a>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kevin Pico. Todos los derechos reservados.</p>
+    <p class="footer-love">Hecho con <span class="heart">♥</span> en Colombia 🇨🇴</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
