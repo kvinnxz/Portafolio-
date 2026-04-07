@@ -1,7 +1,8 @@
+
 /* ─────────────────────────────────────────────────────────────
    NEON COSMOS PORTFOLIO — script.js
    Sections: Cursor · Stars · Nav · Scroll Reveal · Skill Bars
-             Counter Animation · Form · Parallax Orbs
+             Counter Animation · Form · Parallax Orbs · Lang Toggle
 ───────────────────────────────────────────────────────────── */
 
 /* ── CUSTOM CURSOR ──────────────────────────────────────────── */
@@ -17,11 +18,9 @@ document.addEventListener('mousemove', e => {
 });
 
 function animateCursor() {
-  // Dot follows instantly
   dot.style.left = mouseX + 'px';
   dot.style.top  = mouseY + 'px';
 
-  // Ring lags behind with lerp
   ringX += (mouseX - ringX) * 0.12;
   ringY += (mouseY - ringY) * 0.12;
   ring.style.left = ringX + 'px';
@@ -45,7 +44,7 @@ function resizeCanvas() {
 
 function initStars() {
   stars = [];
-  const count = Math.floor((W * H) / 8000); // density based on viewport
+  const count = Math.floor((W * H) / 8000);
   for (let i = 0; i < count; i++) {
     stars.push({
       x:     Math.random() * W,
@@ -120,7 +119,7 @@ document.querySelectorAll('.skill-fill').forEach(el => barObserver.observe(el));
 
 /* ── COUNTER ANIMATION ──────────────────────────────────────── */
 function animateCounter(el, target) {
-  const duration = 1400;
+  const duration  = 1400;
   const stepTime  = 16;
   const increment = target / (duration / stepTime);
   let current = 0;
@@ -161,22 +160,21 @@ if (contactForm) {
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    submitBtn.textContent = 'Enviando...';
+    const lang = document.documentElement.lang;
+    submitBtn.textContent = lang === 'en' ? 'Sending...' : 'Enviando...';
     submitBtn.disabled    = true;
     submitBtn.style.opacity = '0.7';
 
-    // Simulated async send — swap for your real fetch/EmailJS call here
     setTimeout(() => {
-      submitBtn.textContent        = '¡Mensaje enviado! ✓';
+      submitBtn.textContent        = lang === 'en' ? 'Message sent! ✓' : '¡Mensaje enviado! ✓';
       submitBtn.disabled           = false;
       submitBtn.style.opacity      = '1';
       submitBtn.style.background   = '#10b981';
       submitBtn.style.boxShadow    = '0 0 30px rgba(16, 185, 129, 0.4)';
       contactForm.reset();
 
-      // Reset button after 4s
       setTimeout(() => {
-        submitBtn.textContent      = 'Enviar mensaje ✦';
+        submitBtn.textContent      = lang === 'en' ? 'Send message ✦' : 'Enviar mensaje ✦';
         submitBtn.style.background = '';
         submitBtn.style.boxShadow  = '';
       }, 4000);
@@ -198,7 +196,7 @@ document.addEventListener('mousemove', e => {
 
 
 /* ── SMOOTH ACTIVE NAV LINKS ────────────────────────────────── */
-const sections  = document.querySelectorAll('section[id]');
+const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');
 
 const sectionObserver = new IntersectionObserver(entries => {
@@ -214,3 +212,51 @@ const sectionObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => sectionObserver.observe(s));
+
+
+/* ── LANGUAGE TOGGLE ────────────────────────────────────────── */
+let currentLang = 'es';
+
+const langToggleBtn = document.getElementById('lang-toggle');
+const langEsSpan    = langToggleBtn.querySelector('.lang-es');
+const langEnSpan    = langToggleBtn.querySelector('.lang-en');
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  // Toggle active indicator on button
+  langEsSpan.classList.toggle('active', lang === 'es');
+  langEnSpan.classList.toggle('active', lang === 'en');
+
+  // Update all elements with data-es / data-en
+  document.querySelectorAll('[data-es][data-en]').forEach(el => {
+    const text = lang === 'es' ? el.dataset.es : el.dataset.en;
+
+    // For elements that are not inputs/textareas, update innerHTML
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      // handled separately below via data-placeholder-es/en
+    } else {
+      el.innerHTML = text;
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll('[data-placeholder-es][data-placeholder-en]').forEach(el => {
+    el.placeholder = lang === 'es' ? el.dataset.placeholderEs : el.dataset.placeholderEn;
+  });
+
+  // Update submit button (not a data-es element, handled via form submit logic)
+  if (submitBtn && !submitBtn.disabled) {
+    submitBtn.textContent = lang === 'es' ? 'Enviar mensaje ✦' : 'Send message ✦';
+  }
+
+  // Update page title
+  document.title = lang === 'es'
+    ? 'Kevin Pico — Dev Portfolio'
+    : 'Kevin Pico — Dev Portfolio';
+}
+
+langToggleBtn.addEventListener('click', () => {
+  applyLanguage(currentLang === 'es' ? 'en' : 'es');
+});

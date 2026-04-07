@@ -22,12 +22,19 @@
   <nav id="navbar">
     <a class="nav-logo" href="#hero"><span>K</span>Pico</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contacto</a></li>
+      <li><a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+      <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+      <li><a href="#skills" data-es="Skills" data-en="Skills">Skills</a></li>
+      <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
     </ul>
-    <a class="nav-cta" href="#contact">Hablemos</a>
+    <div class="nav-right">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span class="lang-es active">ES</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-en">EN</span>
+      </button>
+      <a class="nav-cta" href="#contact" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
+    </div>
   </nav>
 
   <!-- ── HERO ── -->
@@ -39,7 +46,7 @@
       <div class="hero-left">
         <div class="hero-available reveal">
           <div class="hero-dot"></div>
-          <span>Disponible para proyectos</span>
+          <span data-es="Disponible para proyectos" data-en="Available for projects">Disponible para proyectos</span>
         </div>
         <h1 class="hero-name reveal reveal-d1">
           <span class="line1">Kevin</span>
@@ -48,34 +55,34 @@
           </span>
         </h1>
         <p class="hero-role reveal reveal-d2">
-          Developer &amp; <span>Creative Coder</span> — Colombia 🇨🇴
+          Developer &amp; <span data-es="Creative Coder" data-en="Creative Coder">Creative Coder</span> — Colombia 🇨🇴
         </p>
-        <p class="hero-desc reveal reveal-d3">
+        <p class="hero-desc reveal reveal-d3" data-es="Construyo productos digitales que mezclan código limpio con diseño que impacta. Especializado en experiencias web rápidas, bonitas y escalables." data-en="I build digital products that blend clean code with impactful design. Specialized in fast, beautiful, and scalable web experiences.">
           Construyo productos digitales que mezclan código limpio con diseño que impacta.
           Especializado en experiencias web rápidas, bonitas y escalables.
         </p>
         <div class="hero-ctas reveal reveal-d4">
-          <a class="btn-primary" href="#projects">Ver mi trabajo</a>
-          <a class="btn-secondary" href="#contact">Contactarme</a>
+          <a class="btn-primary" href="#projects" data-es="Ver mi trabajo" data-en="See my work">Ver mi trabajo</a>
+          <a class="btn-secondary" href="#contact" data-es="Contactarme" data-en="Contact me">Contactarme</a>
         </div>
       </div>
 
       <div class="hero-stats reveal reveal-d2">
         <div class="stat-card">
           <div class="num c-i" data-count="24">0</div>
-          <div class="lbl">Proyectos</div>
+          <div class="lbl" data-es="Proyectos" data-en="Projects">Proyectos</div>
         </div>
         <div class="stat-card">
           <div class="num" data-count="5">0</div>
-          <div class="lbl">Años exp.</div>
+          <div class="lbl" data-es="Años exp." data-en="Yrs exp.">Años exp.</div>
         </div>
         <div class="stat-card">
           <div class="num c-r" data-count="12">0</div>
-          <div class="lbl">Clientes</div>
+          <div class="lbl" data-es="Clientes" data-en="Clients">Clientes</div>
         </div>
         <div class="stat-card">
           <div class="num c-i" data-count="99">0</div>
-          <div class="lbl">% Satisfac.</div>
+          <div class="lbl" data-es="% Satisfac." data-en="% Satisf.">% Satisfac.</div>
         </div>
       </div>
     </div>
@@ -96,18 +103,20 @@
         </div>
         <div class="about-badge">
           <div class="badge-n">1+</div>
-          <div class="badge-l">Años de<br>experiencia</div>
+          <div class="badge-l" data-es="Años de<br>experiencia" data-en="Years of<br>experience">Años de<br>experiencia</div>
         </div>
       </div>
       <div class="about-text">
-        <div class="section-tag reveal">Sobre mí</div>
-        <h2 class="section-title reveal reveal-d1">Hola, soy <span>Kevin</span> 👋</h2>
-        <p class="reveal reveal-d2">
+        <div class="section-tag reveal" data-es="Sobre mí" data-en="About me">Sobre mí</div>
+        <h2 class="section-title reveal reveal-d1">
+          <span data-es="Hola, soy " data-en="Hi, I'm ">Hola, soy </span><span>Kevin</span> 👋
+        </h2>
+        <p class="reveal reveal-d2" data-es="Soy un desarrollador full-stack de <strong>Colombia</strong>, apasionado por construir productos que resuelven problemas reales. Me encanta la intersección entre tecnología y diseño, donde el código se convierte en experiencias memorables." data-en="I'm a full-stack developer from <strong>Colombia</strong>, passionate about building products that solve real problems. I love the intersection between technology and design, where code becomes memorable experiences.">
           Soy un desarrollador full-stack de <strong>Colombia</strong>, apasionado por construir
           productos que resuelven problemas reales. Me encanta la intersección entre
           tecnología y diseño, donde el código se convierte en experiencias memorables.
         </p>
-         <p class="reveal reveal-d3">
+        <p class="reveal reveal-d3" data-es="He realizado proyectos en <strong>Campuslands</strong>, donde he aprendido y mejorado mis habilidades constantemente. Cada proyecto ha sido una oportunidad para crecer, aplicar nuevas tecnologías y afianzar mi stack favorito alrededor de C#, Html, Css, JavaScript y bases de datos relacionales." data-en="I've worked on projects at <strong>Campuslands</strong>, where I've continuously learned and improved my skills. Each project has been an opportunity to grow, apply new technologies, and strengthen my favorite stack around C#, Html, Css, JavaScript, and relational databases.">
           He realizado proyectos en <strong>Campuslands</strong>, donde he aprendido y mejorado
           mis habilidades constantemente. Cada proyecto ha sido una oportunidad para
           crecer, aplicar nuevas tecnologías y afianzar mi stack favorito alrededor de
@@ -132,112 +141,108 @@
   <!-- ── PROJECTS ── -->
   <section id="projects">
     <div class="orb orb-r" style="width:450px;height:450px;top:0;right:-100px;opacity:0.35;"></div>
-    <div class="section-tag reveal">Portafolio</div>
-    <h2 class="section-title reveal reveal-d1">Proyectos <span>seleccionados</span></h2>
+    <div class="section-tag reveal" data-es="Portafolio" data-en="Portfolio">Portafolio</div>
+    <h2 class="section-title reveal reveal-d1" data-es="Proyectos <span>seleccionados</span>" data-en="Selected <span>projects</span>">Proyectos <span>seleccionados</span></h2>
 
     <div class="projects-grid">
 
+      <!-- Hotel JS - featured -->
       <div class="project-card featured reveal">
         <div class="project-header">
-          <div class="project-icon" style="background:rgba(99,102,241,0.12);">🚀</div>
+          <div class="project-icon" style="background:rgba(99,102,241,0.12);">🏨</div>
           <div class="project-links">
-            <a class="project-link" href="#" title="GitHub">⌥</a>
-            <a class="project-link" href="#" title="Live">↗</a>
+            <a class="project-link" href="https://github.com/kvinnxz/Proyecto_HotelJS" target="_blank" title="GitHub">⌥</a>
           </div>
         </div>
-        <h3 class="project-name">NovaPay — Plataforma de Pagos</h3>
-        <p class="project-desc">
-          Plataforma de pagos en tiempo real para Latinoamérica. Procesa más de
-          $2M/mes, con dashboard analytics, webhooks y API REST pública. Reducción
-          del 60% en tiempo de integración vs competidores.
+        <h3 class="project-name">Hotel el Rincón del Carmen</h3>
+        <p class="project-desc" data-es="Sistema de gestión hotelera completo en JavaScript vanilla. Incluye catálogo de habitaciones con filtros, sistema de reservas con validación de disponibilidad, panel de administración, módulo de quejas y reclamos, y autenticación de usuarios con sesiones." data-en="Full hotel management system in vanilla JavaScript. Includes room catalog with filters, reservations system with availability validation, admin panel, complaints module, and user authentication with sessions.">
+          Sistema de gestión hotelera completo en JavaScript vanilla. Incluye catálogo de habitaciones con filtros, sistema de reservas con validación de disponibilidad, panel de administración, módulo de quejas y reclamos, y autenticación de usuarios con sesiones.
         </p>
         <div class="project-stack">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">PostgreSQL</span>
-          <span class="tech-tag">Redis</span>
-          <span class="tech-tag rose">AWS Lambda</span>
-          <span class="tech-tag rose">Stripe API</span>
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag rose">Web Components</span>
+          <span class="tech-tag rose">localStorage</span>
         </div>
       </div>
 
+      <!-- LuxTime -->
       <div class="project-card reveal reveal-d1">
         <div class="project-header">
-          <div class="project-icon" style="background:rgba(244,63,94,0.10);">🧠</div>
+          <div class="project-icon" style="background:rgba(244,63,94,0.10);">⌚</div>
           <div class="project-links">
-            <a class="project-link" href="#" title="GitHub">⌥</a>
-            <a class="project-link" href="#" title="Live">↗</a>
+            <a class="project-link" href="https://github.com/kvinnxz/Proyecto_Pico_Kevin" target="_blank" title="GitHub">⌥</a>
+            <a class="project-link" href="https://loquacious-pavlova-ee6147.netlify.app/" target="_blank" title="Live">↗</a>
           </div>
         </div>
-        <h3 class="project-name">MindFlow — App de Salud Mental</h3>
-        <p class="project-desc">
-          App móvil de seguimiento emocional con IA. Más de 8k usuarios activos y
-          4.8 estrellas en Play Store.
+        <h3 class="project-name">LuxTime — <span data-es="Tienda de Relojes de Lujo" data-en="Luxury Watch Store">Tienda de Relojes de Lujo</span></h3>
+        <p class="project-desc" data-es="Sitio web elegante para una tienda de relojes de lujo. Carrusel automático, catálogo de 20 productos con páginas de detalle, línea de tiempo corporativa, galería visual y formulario de contacto con validación." data-en="Elegant website for a luxury watch store. Auto carousel, catalog of 20 products with detail pages, corporate timeline, visual gallery, and contact form with validation.">
+          Sitio web elegante para una tienda de relojes de lujo. Carrusel automático, catálogo de 20 productos con páginas de detalle, línea de tiempo corporativa y formulario de contacto con validación.
         </p>
         <div class="project-stack">
-          <span class="tech-tag">React Native</span>
-          <span class="tech-tag rose">OpenAI API</span>
-          <span class="tech-tag">Supabase</span>
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag rose">CSS Grid</span>
+          <span class="tech-tag rose">Netlify</span>
         </div>
       </div>
 
+      <!-- AgendaBot -->
       <div class="project-card reveal reveal-d2">
         <div class="project-header">
-          <div class="project-icon" style="background:rgba(99,102,241,0.12);">🌿</div>
+          <div class="project-icon" style="background:rgba(99,102,241,0.12);">🤖</div>
           <div class="project-links">
-            <a class="project-link" href="#" title="GitHub">⌥</a>
-            <a class="project-link" href="#" title="Live">↗</a>
+            <a class="project-link" href="https://github.com/santiagoGal7/Proyecto_IA_Nivel1_Santiago_Gallo--Kevin_Pico" target="_blank" title="GitHub">⌥</a>
           </div>
         </div>
-        <h3 class="project-name">EcoTrack — Carbon Footprint</h3>
-        <p class="project-desc">
-          Dashboard para empresas que mide y visualiza su huella de carbono.
-          Integra datos de IoT y APIs de proveedores de energía.
+        <h3 class="project-name">AgendaBot — <span data-es="Bot de Automatización" data-en="Automation Bot">Bot de Automatización</span></h3>
+        <p class="project-desc" data-es="Bot de Telegram para agendar citas, gestionar tareas, hábitos y listas. Construido con n8n Community Edition y Google Sheets como base de datos. Navegación por menús numéricos, flujos guiados por pasos y registro automático de logs." data-en="Telegram bot to schedule appointments, manage tasks, habits and lists. Built with n8n Community Edition and Google Sheets as database. Numeric menu navigation, step-guided flows and automatic log registration.">
+          Bot de Telegram para agendar citas, gestionar tareas, hábitos y listas. Construido con n8n Community Edition y Google Sheets. Navegación por menús numéricos y flujos guiados paso a paso.
         </p>
         <div class="project-stack">
-          <span class="tech-tag">Next.js</span>
-          <span class="tech-tag">D3.js</span>
-          <span class="tech-tag rose">IoT / MQTT</span>
+          <span class="tech-tag">Telegram API</span>
+          <span class="tech-tag rose">n8n</span>
+          <span class="tech-tag rose">Google Sheets</span>
         </div>
       </div>
 
+      <!-- Liga BetPlay -->
       <div class="project-card reveal reveal-d1">
         <div class="project-header">
-          <div class="project-icon" style="background:rgba(244,63,94,0.10);">🏪</div>
+          <div class="project-icon" style="background:rgba(244,63,94,0.10);">⚽</div>
           <div class="project-links">
-            <a class="project-link" href="#" title="GitHub">⌥</a>
-            <a class="project-link" href="#" title="Live">↗</a>
+            <span class="project-link" title="App de consola" style="opacity:0.35;cursor:default;">⌥</span>
           </div>
         </div>
-        <h3 class="project-name">StoreOS — E-commerce Engine</h3>
-        <p class="project-desc">
-          Motor de e-commerce headless para pymes. Multi-tienda, multi-moneda
-          y fácil de integrar con cualquier frontend.
+        <h3 class="project-name">Liga BetPlay — <span data-es="Simulador de Consola" data-en="Console Simulator">Simulador de Consola</span></h3>
+        <p class="project-desc" data-es="Simulador de la Liga BetPlay en consola con C#. Gestiona equipos, simula partidos con resultados aleatorios, actualiza estadísticas automáticamente y ofrece 15 consultas LINQ sobre el torneo (líder, top 3, equipos invictos, ranking agrupado y más)." data-en="BetPlay League console simulator in C#. Manages teams, simulates matches with random results, auto-updates statistics, and offers 15 LINQ queries on the tournament (leader, top 3, unbeaten teams, grouped rankings, and more).">
+          Simulador de la Liga BetPlay en consola con C#. Gestiona equipos, simula partidos con resultados aleatorios y ofrece 15 consultas LINQ: líder, top 3, equipos invictos, ranking agrupado y más.
         </p>
         <div class="project-stack">
-          <span class="tech-tag">TypeScript</span>
-          <span class="tech-tag">GraphQL</span>
-          <span class="tech-tag rose">Docker</span>
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">.NET 10</span>
+          <span class="tech-tag rose">LINQ</span>
+          <span class="tech-tag rose">POO</span>
         </div>
       </div>
 
+      <!-- Gestor Colección -->
       <div class="project-card reveal reveal-d2">
         <div class="project-header">
-          <div class="project-icon" style="background:rgba(99,102,241,0.12);">📡</div>
+          <div class="project-icon" style="background:rgba(99,102,241,0.12);">📚</div>
           <div class="project-links">
-            <a class="project-link" href="#" title="GitHub">⌥</a>
-            <a class="project-link" href="#" title="Live">↗</a>
+            <span class="project-link" title="App de consola" style="opacity:0.35;cursor:default;">⌥</span>
           </div>
         </div>
-        <h3 class="project-name">PulseAPI — Monitoreo en Tiempo Real</h3>
-        <p class="project-desc">
-          Herramienta open-source de monitoreo de APIs y servicios. Alertas
-          por Slack, email y webhook con dashboards configurables.
+        <h3 class="project-name">Gestor de Colección — <span data-es="App de Consola" data-en="Console App">App de Consola</span></h3>
+        <p class="project-desc" data-es="Administrador de colecciones culturales en Python. Permite registrar libros, películas y música con título, autor, género y valoración. Incluye búsqueda por múltiples criterios, filtro por categoría, edición, eliminación y persistencia en JSON con sistema de respaldos." data-en="Cultural collection manager in Python. Register books, movies and music with title, author, genre and rating. Includes multi-criteria search, category filter, edit, delete and JSON persistence with backup system.">
+          Administrador de colecciones culturales en Python. Registra libros, películas y música. Búsqueda por múltiples criterios, filtros, edición y persistencia en JSON con sistema de respaldos automáticos.
         </p>
         <div class="project-stack">
-          <span class="tech-tag">Go</span>
-          <span class="tech-tag">WebSockets</span>
-          <span class="tech-tag rose">Prometheus</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag rose">JSON</span>
+          <span class="tech-tag rose">tabulate</span>
         </div>
       </div>
 
@@ -247,12 +252,12 @@
   <!-- ── SKILLS ── -->
   <section id="skills">
     <div class="orb orb-i" style="width:400px;height:400px;bottom:-100px;left:30%;opacity:0.3;"></div>
-    <div class="section-tag reveal">Habilidades</div>
-    <h2 class="section-title reveal reveal-d1">Mi <span>stack</span></h2>
+    <div class="section-tag reveal" data-es="Habilidades" data-en="Skills">Habilidades</div>
+    <h2 class="section-title reveal reveal-d1"><span data-es="Mi " data-en="My ">Mi </span><span data-es="stack" data-en="stack">stack</span></h2>
 
     <div class="skills-layout">
       <div>
-        <div class="skill-group-title reveal">Frontend</div>
+        <div class="skill-group-title reveal" data-es="Frontend" data-en="Frontend">Frontend</div>
         <div class="skill-item reveal reveal-d1">
           <div class="skill-meta"><span class="skill-name">React / Next.js</span><span class="skill-pct">95%</span></div>
           <div class="skill-bar"><div class="skill-fill i" data-w="95"></div></div>
@@ -262,7 +267,7 @@
           <div class="skill-bar"><div class="skill-fill i" data-w="90"></div></div>
         </div>
         <div class="skill-item reveal reveal-d3">
-          <div class="skill-meta"><span class="skill-name">CSS / Animaciones</span><span class="skill-pct">88%</span></div>
+          <div class="skill-meta"><span class="skill-name" data-es="CSS / Animaciones" data-en="CSS / Animations">CSS / Animaciones</span><span class="skill-pct">88%</span></div>
           <div class="skill-bar"><div class="skill-fill i" data-w="88"></div></div>
         </div>
         <div class="skill-item reveal reveal-d4">
@@ -271,7 +276,7 @@
         </div>
       </div>
       <div>
-        <div class="skill-group-title reveal">Backend &amp; DevOps</div>
+        <div class="skill-group-title reveal" data-es="Backend &amp; DevOps" data-en="Backend &amp; DevOps">Backend &amp; DevOps</div>
         <div class="skill-item reveal reveal-d1">
           <div class="skill-meta"><span class="skill-name">Node.js / Express</span><span class="skill-pct">92%</span></div>
           <div class="skill-bar"><div class="skill-fill r" data-w="92"></div></div>
@@ -291,22 +296,25 @@
       </div>
     </div>
 
+    <div class="soft-skills-title reveal" data-es="Habilidades Blandas" data-en="Soft Skills">Habilidades Blandas</div>
     <div class="tools-grid">
-      <div class="tool-chip reveal"><span class="tool-icon">⚛️</span><div><div class="tool-name">React</div><div class="tool-lv">Avanzado</div></div></div>
-      <div class="tool-chip reveal reveal-d1"><span class="tool-icon">🟢</span><div><div class="tool-name">Node.js</div><div class="tool-lv">Avanzado</div></div></div>
-      <div class="tool-chip reveal reveal-d2"><span class="tool-icon">🐘</span><div><div class="tool-name">PostgreSQL</div><div class="tool-lv">Avanzado</div></div></div>
-      <div class="tool-chip reveal reveal-d1"><span class="tool-icon">🐳</span><div><div class="tool-name">Docker</div><div class="tool-lv">Intermedio</div></div></div>
-      <div class="tool-chip reveal reveal-d2"><span class="tool-icon">☁️</span><div><div class="tool-name">AWS</div><div class="tool-lv">Intermedio</div></div></div>
-      <div class="tool-chip reveal reveal-d3"><span class="tool-icon">🔷</span><div><div class="tool-name">TypeScript</div><div class="tool-lv">Avanzado</div></div></div>
+      <div class="tool-chip reveal"><span class="tool-icon">🤝</span><div><div class="tool-name" data-es="Trabajo en equipo" data-en="Teamwork">Trabajo en equipo</div><div class="tool-lv" data-es="Scrum / Agile" data-en="Scrum / Agile">Scrum / Agile</div></div></div>
+      <div class="tool-chip reveal reveal-d1"><span class="tool-icon">💬</span><div><div class="tool-name" data-es="Comunicación" data-en="Communication">Comunicación</div><div class="tool-lv" data-es="Asertiva y clara" data-en="Assertive and clear">Asertiva y clara</div></div></div>
+      <div class="tool-chip reveal reveal-d2"><span class="tool-icon">🧩</span><div><div class="tool-name" data-es="Resolución de problemas" data-en="Problem solving">Resolución de problemas</div><div class="tool-lv" data-es="Pensamiento lógico" data-en="Logical thinking">Pensamiento lógico</div></div></div>
+      <div class="tool-chip reveal reveal-d1"><span class="tool-icon">📚</span><div><div class="tool-name" data-es="Aprendizaje continuo" data-en="Continuous learning">Aprendizaje continuo</div><div class="tool-lv" data-es="Autodidacta" data-en="Self-taught">Autodidacta</div></div></div>
+      <div class="tool-chip reveal reveal-d2"><span class="tool-icon">⏱️</span><div><div class="tool-name" data-es="Gestión del tiempo" data-en="Time management">Gestión del tiempo</div><div class="tool-lv" data-es="Organizado y puntual" data-en="Organized and punctual">Organizado y puntual</div></div></div>
+      <div class="tool-chip reveal reveal-d3"><span class="tool-icon">🔄</span><div><div class="tool-name" data-es="Adaptabilidad" data-en="Adaptability">Adaptabilidad</div><div class="tool-lv" data-es="Flexible ante cambios" data-en="Flexible to change">Flexible ante cambios</div></div></div>
     </div>
   </section>
 
   <!-- ── CONTACT ── -->
   <section id="contact">
     <div class="orb orb-r" style="width:500px;height:500px;top:-100px;left:50%;transform:translateX(-50%);opacity:0.3;"></div>
-    <div class="section-tag reveal" style="justify-content:center;">Contacto</div>
-    <h2 class="section-title reveal reveal-d1">¿Tienes un <span>proyecto</span>?</h2>
-    <p class="contact-sub reveal reveal-d2">
+    <div class="section-tag reveal" style="justify-content:center;" data-es="Contacto" data-en="Contact">Contacto</div>
+    <h2 class="section-title reveal reveal-d1">
+      <span data-es="¿Tienes un " data-en="Got a ">¿Tienes un </span><span data-es="proyecto" data-en="project">proyecto</span><span data-es="?" data-en="?">?</span>
+    </h2>
+    <p class="contact-sub reveal reveal-d2" data-es="Siempre estoy abierto a nuevas oportunidades. Cuéntame de qué se trata y hablamos." data-en="I'm always open to new opportunities. Tell me what it's about and let's talk.">
       Siempre estoy abierto a nuevas oportunidades. Cuéntame de qué se trata y hablamos.
     </p>
 
@@ -314,8 +322,8 @@
       <form id="contact-form">
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Nombre</label>
-            <input class="form-input" type="text" placeholder="Tu nombre" required />
+            <label class="form-label" data-es="Nombre" data-en="Name">Nombre</label>
+            <input class="form-input" type="text" data-placeholder-es="Tu nombre" data-placeholder-en="Your name" placeholder="Tu nombre" required />
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
@@ -323,29 +331,28 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label">Asunto</label>
-          <input class="form-input" type="text" placeholder="¿De qué se trata?" required />
+          <label class="form-label" data-es="Asunto" data-en="Subject">Asunto</label>
+          <input class="form-input" type="text" data-placeholder-es="¿De qué se trata?" data-placeholder-en="What's it about?" placeholder="¿De qué se trata?" required />
         </div>
         <div class="form-group">
-          <label class="form-label">Mensaje</label>
-          <textarea class="form-textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          <label class="form-label" data-es="Mensaje" data-en="Message">Mensaje</label>
+          <textarea class="form-textarea" data-placeholder-es="Cuéntame sobre tu proyecto..." data-placeholder-en="Tell me about your project..." placeholder="Cuéntame sobre tu proyecto..." required></textarea>
         </div>
-        <button type="submit" class="form-submit" id="submit-btn">Enviar mensaje ✦</button>
+        <button type="submit" class="form-submit" id="submit-btn" data-es="Enviar mensaje ✦" data-en="Send message ✦">Enviar mensaje ✦</button>
       </form>
     </div>
 
     <div class="social-row reveal">
       <a class="social-btn" href="https://github.com/kvinnxz" target="_blank"><span>⌥</span> GitHub</a>
       <a class="social-btn" href="www.linkedin.com/in/kevin-pico" target="_blank"><span>in</span> LinkedIn</a>
-      <a class="social-btn" href="mailto:contacto@kevinpico.dev"><span>@</span> Email</a>
+      <a class="social-btn" href="/cdn-cgi/l/email-protection#cfaca0a1bbaeacbba08fa4aab9a6a1bfa6aca0e1abaab9"><span>@</span> Email</a>
     </div>
   </section>
 
-
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Kevin Pico. Todos los derechos reservados.</p>
-    <p class="footer-love">Hecho con <span class="heart">♥</span> en Colombia 🇨🇴</p>
+    <p>© 2025 Kevin Pico. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+    <p class="footer-love"><span data-es="Hecho con" data-en="Made with">Hecho con</span> <span class="heart">♥</span> <span data-es="en Colombia 🇨🇴" data-en="in Colombia 🇨🇴">en Colombia 🇨🇴</span></p>
   </footer>
 
   <script src="script.js"></script>

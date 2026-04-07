@@ -24,9 +24,7 @@
   --mono:      'JetBrains Mono', monospace;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
@@ -145,6 +143,53 @@ nav.scrolled {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--text); }
+
+/* ── NAV RIGHT (lang + cta) ─────────────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── LANGUAGE TOGGLE ────────────────────────────────────────── */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--muted2);
+  border-radius: 100px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.lang-toggle:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.lang-toggle .lang-es,
+.lang-toggle .lang-en {
+  transition: color 0.25s, font-weight 0.25s;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.lang-toggle .lang-es.active,
+.lang-toggle .lang-en.active {
+  color: var(--indigo-l);
+  font-weight: 700;
+}
+
+.lang-toggle .lang-divider {
+  color: var(--muted2);
+  font-size: 10px;
+}
 
 .nav-cta {
   font-family: var(--mono);
@@ -636,6 +681,16 @@ h2.section-title span { color: var(--indigo); }
 .skill-fill.i { background: linear-gradient(90deg, var(--indigo), var(--indigo-l)); }
 .skill-fill.r { background: linear-gradient(90deg, var(--rose), var(--rose-l)); }
 
+.soft-skills-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--rose);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -830,6 +885,7 @@ footer .heart { color: var(--rose); }
   #skills .skills-layout { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
+  .lang-toggle { padding: 5px 10px; }
 }
 
 @media (max-width: 600px) {
