@@ -156,8 +156,26 @@ if (heroStats) counterObserver.observe(heroStats);
 const contactForm = document.getElementById('contact-form');
 const submitBtn   = document.getElementById('submit-btn');
 
+function resetSubmitButton(lang) {
+  submitBtn.textContent      = lang === 'en' ? 'Send message ✦' : 'Enviar mensaje ✦';
+  submitBtn.disabled         = false;
+  submitBtn.style.opacity    = '1';
+  submitBtn.style.background = '';
+  submitBtn.style.boxShadow  = '';
+}
+
+function showSubmitError(lang) {
+  submitBtn.textContent      = lang === 'en' ? 'Error sending' : 'Error al enviar';
+  submitBtn.disabled         = false;
+  submitBtn.style.opacity    = '1';
+  submitBtn.style.background = '#ef4444';
+  submitBtn.style.boxShadow  = '0 0 30px rgba(239, 68, 68, 0.4)';
+
+  setTimeout(() => resetSubmitButton(lang), 4000);
+}
+
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
 
     const lang = document.documentElement.lang;
@@ -165,20 +183,35 @@ if (contactForm) {
     submitBtn.disabled    = true;
     submitBtn.style.opacity = '0.7';
 
-    setTimeout(() => {
+    if (typeof emailjs === 'undefined') {
+      console.error('EmailJS library not loaded');
+      showSubmitError(lang);
+      return;
+    }
+
+    try {
+      emailjs.init('7T6_wKAPjA4gzj5QO'); // Public key de EmailJS
+
+      const templateParams = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+
+      await emailjs.send('service_myw2zni', 'template_dt834pg', templateParams);
+
       submitBtn.textContent        = lang === 'en' ? 'Message sent! ✓' : '¡Mensaje enviado! ✓';
-      submitBtn.disabled           = false;
       submitBtn.style.opacity      = '1';
       submitBtn.style.background   = '#10b981';
       submitBtn.style.boxShadow    = '0 0 30px rgba(16, 185, 129, 0.4)';
       contactForm.reset();
 
-      setTimeout(() => {
-        submitBtn.textContent      = lang === 'en' ? 'Send message ✦' : 'Enviar mensaje ✦';
-        submitBtn.style.background = '';
-        submitBtn.style.boxShadow  = '';
-      }, 4000);
-    }, 1200);
+      setTimeout(() => resetSubmitButton(lang), 4000);
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      showSubmitError(lang);
+    }
   });
 }
 
